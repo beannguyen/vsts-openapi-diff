@@ -24,6 +24,7 @@
     "shelljs": "^0.8.4"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "growl": "^1.10.5",
     "lodash": "^4.17.21",
     "merge-stream": "^2.0.0"

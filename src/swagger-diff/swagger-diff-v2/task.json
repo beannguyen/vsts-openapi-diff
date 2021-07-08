@@ -108,6 +108,15 @@
       "helpMarkDown": "The URL of the right-side contract.",
       "visibleRule": "rightType = url",
       "groupName": "right"
+    },
+    {
+      "name": "webhookUrl",
+      "type": "string",
+      "label": "Webhook Url:",
+      "defaultValue": "",
+      "required": "true",
+      "helpMarkDown": "The URL of the webhook. We use to send the breaking changes notification",
+      "groupName": "webhook"
     }
   ],
   "instanceNameFormat": "OpenAPI Contract Diff $(name)",
