@@ -10,7 +10,6 @@
   "main": "",
   "keywords": [],
   "dependencies": {
-    "axios": "^0.21.1",
     "azure-pipelines-task-lib": "^3.1.4",
     "extend": "^3.0.2",
     "growl": "^1.10.5",

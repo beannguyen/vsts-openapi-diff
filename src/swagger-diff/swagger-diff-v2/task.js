@@ -3,7 +3,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var util = require("util");
 // var fail = require("assert").fail;
 var task = require("azure-pipelines-task-lib/task");
-const axios = require('axios');
+const fetch = require("node-fetch");
+
 
 var swaggerVersion = task.getInput("swaggerVersion", true);
 
@@ -30,6 +31,16 @@ const webhookUrl = task.getInput("webhookUrl", true);
 var config = null;
 
 var extConfig = task.getInput("config", false);
+
+function sendToWebhook(data) {
+    fetch(webhookUrl, {
+        method: 'post',
+        body:    JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+    })
+    .then(res => res.json())
+    .then(json => task.debug('Sent notification to webhook {0}. Response {1}'.format(webhookUrl, JSON.stringify(json))));
+}
 
 if (swaggerVersion == "v2") {
     var swaggerDiffLib = require("swagger-diff");
@@ -74,16 +85,8 @@ if (swaggerVersion == "v2") {
             task.debug(JSON.stringify(diff));
 
             if (diff.errors && diff.errors.length > 0) {
-
-                axios.post(webhookUrl, diff)
-                    .then(function (response) {
-                        console.log(response);
-                        task.debug('Sent notification to webhook {0}. Response {1}'.format(webhookUrl, JSON.stringify(response)));
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                        task.debug('Failed to send notification to webhook {0}'.format(webhookUrl));
-                    });
+                
+                sendToWebhook(diff);
             }
 
 
@@ -102,7 +105,6 @@ if (swaggerVersion == "v2") {
     (async () => {
         const openApiDiff = require("openapi-diff");
         const fs = require("fs");
-        const fetch = require("node-fetch");
 
         const readFile = util.promisify(fs.readFile);
 
@@ -215,15 +217,7 @@ if (swaggerVersion == "v2") {
         task.debug(JSON.stringify(result));
 
         if (result.breakingDifferencesFound) {
-            axios.post(webhookUrl, result)
-                .then(function (response) {
-                    console.log(response);
-                    task.debug('Sent notification to webhook {0}. Response {1}'.format(webhookUrl, JSON.stringify(response)));
-                })
-                .catch(function (error) {
-                    console.log(error);
-                    task.debug('Failed to send notification to webhook {0}'.format(webhookUrl));
-                });
+            sendToWebhook(result);
         }
 
         // we don't want to stop the pipeline if there are any breaking changes
