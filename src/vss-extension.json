@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
-  "extensionId": "vsts-swagger-diff",
-  "name": "OpenAPI Contract Diff",
-  "version": "1.2.2",
-  "publisher": "knom",
+  "extensionId": "hbd-vsts-swagger-diff",
+  "name": "OpenAPI Contract Diff (HBD)",
+  "version": "2.0.1",
+  "publisher": "duy",
   "description": "A build/release task for comparing OpenAPI Contracts.",
   "public": true,
   "galleryFlags": [],
