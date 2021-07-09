@@ -5,19 +5,14 @@
   "description": "A build/release task for comparing two Swagger Contracts.",
   "helpMarkdown": "### Compare two Swagger Contracts - left-side and right-side.",
   "category": "Test",
-  "visibility": [
-    "Build",
-    "Release"
-  ],
+  "visibility": ["Build", "Release"],
   "author": "duy",
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 0
+    "Patch": 1
   },
-  "demands": [
-    "npm"
-  ],
+  "demands": ["npm"],
   "groups": [
     {
       "name": "left",

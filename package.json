@@ -32,7 +32,7 @@
     "tfx-cli": "^0.9.2"
   },
   "scripts": {
-    "clean": "rimraf ./*.vsix",
+    "clean": "rimraf src/*.vsix",
     "package": "cd src && npm run clean && tfx extension create --manifest-globs --rev-version",
     "update": "ncu -u && npm install"
   }
