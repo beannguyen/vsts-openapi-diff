@@ -1,5 +1,5 @@
 {
-  "id": "d0b32dd5-f8bd-4118-8e66-699ad33189a2",
+  "id": "1f570c9d-9134-406c-b654-eca4b880ec3b",
   "name": "swagger-diff",
   "friendlyName": "OpenApi Contract Diff",
   "description": "A build/release task for comparing two OpenAPI (v3) or Swagger (v2) REST Contracts.",
@@ -9,7 +9,7 @@
     "Build",
     "Release"
   ],
-  "author": "knom",
+  "author": "duy",
   "version": {
     "Major": 2,
     "Minor": 0,

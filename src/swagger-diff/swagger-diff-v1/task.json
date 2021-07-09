@@ -1,5 +1,5 @@
 {
-  "id": "d0b32dd5-f8bd-4118-8e66-699ad33189a2",
+  "id": "1f570c9d-9134-406c-b654-eca4b880ec3b",
   "name": "swagger-diff",
   "friendlyName": "Swagger Contract Diff",
   "description": "A build/release task for comparing two Swagger Contracts.",
@@ -9,11 +9,11 @@
     "Build",
     "Release"
   ],
-  "author": "knom",
+  "author": "duy",
   "version": {
     "Major": 1,
-    "Minor": 2,
-    "Patch": 7
+    "Minor": 0,
+    "Patch": 0
   },
   "demands": [
     "npm"
