@@ -5,19 +5,14 @@
   "description": "A build/release task for comparing two OpenAPI (v3) or Swagger (v2) REST Contracts.",
   "helpMarkdown": "### Compare two Contracts - left-side and right-side.\nContracts can be either OpenAPI (v3) or Swagger (v2).",
   "category": "Test",
-  "visibility": [
-    "Build",
-    "Release"
-  ],
+  "visibility": ["Build", "Release"],
   "author": "duy",
   "version": {
     "Major": 2,
     "Minor": 0,
-    "Patch": 0
+    "Patch": 1
   },
-  "demands": [
-    "npm"
-  ],
+  "demands": ["npm"],
   "groups": [
     {
       "name": "left",
