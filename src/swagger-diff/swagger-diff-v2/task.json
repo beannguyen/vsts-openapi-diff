@@ -28,6 +28,11 @@
       "name": "right",
       "displayName": "Right-Side Contract",
       "isExpanded": true
+    },
+    {
+      "name": "webhook",
+      "displayName": "Webhook",
+      "isExpanded": true
     }
   ],
   "inputs": [
@@ -42,6 +47,15 @@
         "v3": "OpenAPI (v3)",
         "v2": "Swagger (v2)"
       }
+    },
+    {
+      "name": "webhookUrl",
+      "type": "string",
+      "label": "Webhook Url:",
+      "defaultValue": "",
+      "required": "true",
+      "helpMarkDown": "The URL of the webhook. We use to send the breaking changes notification",
+      "groupName": "webhook"
     },
     {
       "name": "leftType",
@@ -108,15 +122,6 @@
       "helpMarkDown": "The URL of the right-side contract.",
       "visibleRule": "rightType = url",
       "groupName": "right"
-    },
-    {
-      "name": "webhookUrl",
-      "type": "string",
-      "label": "Webhook Url:",
-      "defaultValue": "",
-      "required": "true",
-      "helpMarkDown": "The URL of the webhook. We use to send the breaking changes notification",
-      "groupName": "webhook"
     }
   ],
   "instanceNameFormat": "OpenAPI Contract Diff $(name)",
