@@ -1,7 +1,7 @@
 {
   "id": "1f570c9d-9134-406c-b654-eca4b880ec3b",
   "name": "swagger-diff",
-  "friendlyName": "OpenApi Contract Diff",
+  "friendlyName": "OpenApi Contract Diff V2",
   "description": "A build/release task for comparing two OpenAPI (v3) or Swagger (v2) REST Contracts.",
   "helpMarkdown": "### Compare two Contracts - left-side and right-side.\nContracts can be either OpenAPI (v3) or Swagger (v2).",
   "category": "Test",
@@ -28,11 +28,6 @@
       "name": "right",
       "displayName": "Right-Side Contract",
       "isExpanded": true
-    },
-    {
-      "name": "webhook",
-      "displayName": "Webhook",
-      "isExpanded": true
     }
   ],
   "inputs": [
@@ -54,8 +49,7 @@
       "label": "Webhook Url:",
       "defaultValue": "",
       "required": "true",
-      "helpMarkDown": "The URL of the webhook. We use to send the breaking changes notification",
-      "groupName": "webhook"
+      "helpMarkDown": "The URL of the webhook. We use to send the breaking changes notification"
     },
     {
       "name": "leftType",

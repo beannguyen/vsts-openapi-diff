@@ -1,7 +1,7 @@
 {
   "id": "1f570c9d-9134-406c-b654-eca4b880ec3b",
   "name": "swagger-diff",
-  "friendlyName": "Swagger Contract Diff",
+  "friendlyName": "Swagger Contract Diff V1",
   "description": "A build/release task for comparing two Swagger Contracts.",
   "helpMarkdown": "### Compare two Swagger Contracts - left-side and right-side.",
   "category": "Test",
